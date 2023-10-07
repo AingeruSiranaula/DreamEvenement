@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "345539578341",
+    "project_id": "dream-evenement",
+    "storage_bucket": "dream-evenement.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345539578341:android:f752e3103927166c03470c",
+        "android_client_info": {
+          "package_name": "com.talde3.dreamevenement"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADP5j488EKFt9ZaBfZtTYhMBFk9CxTqrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
