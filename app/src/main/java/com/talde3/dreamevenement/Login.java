@@ -8,8 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Login extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class Login extends AppCompatActivity {
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,7 @@ public class Login extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                mAuth = FirebaseAuth.getInstance();
 
                 Intent intent = new Intent(Login.this, Login.class);
                 startActivity(intent);
@@ -32,7 +35,7 @@ public class Login extends AppCompatActivity {
         txtErregistroa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Login.this, Login.class);
+                Intent intent = new Intent(Login.this, Erregistroa.class);
                 startActivity(intent);
             }
         });

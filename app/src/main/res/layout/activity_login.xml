@@ -7,80 +7,28 @@
     android:background="@color/beige"
     tools:context=".Login">
 
-    <EditText
-        android:id="@+id/etEmailLogin"
-        android:layout_width="219dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="44dp"
-        android:autofillHints="Email"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="@string/etEmailLogin"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/txtEmailLogin"
-        app:layout_constraintTop_toBottomOf="@+id/imgLeloaLogin" />
-
-    <EditText
-        android:id="@+id/etPasahitzaLogin"
-        android:layout_width="219dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:autofillHints="Email"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="@string/etPasahitzaLogin"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
-        app:layout_constraintStart_toEndOf="@+id/txtPasahitzaLogin"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailLogin" />
-
     <ImageView
         android:id="@+id/imgLeloaLogin"
         android:layout_width="319dp"
         android:layout_height="304dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/leloa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtEmailLogin"
-        android:layout_width="78dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="64dp"
-        android:text="@string/txtEmailLogin"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgLeloaLogin" />
-
-    <TextView
-        android:id="@+id/txtPasahitzaLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/txtPasahitzaLogin"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmailLogin"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/buttonColor"
         android:text="@string/btnLogin"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPasahitzaLogin" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtErregistroaLogin"
@@ -88,8 +36,89 @@
         android:layout_height="wrap_content"
         android:text="@string/txtErregistroaLogin"
         android:textColor="@color/blue"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="313dp"
+        android:layout_height="112dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLeloaLogin"
+        app:layout_constraintVertical_bias="0.183">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtEmailLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtEmailLogin"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgLeloaLogin" />
+
+            <EditText
+                android:id="@+id/etEmailLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:autofillHints="Email"
+                android:ems="10"
+                android:hint="@string/etEmailLogin"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtEmailLogin"
+                app:layout_constraintTop_toBottomOf="@+id/imgLeloaLogin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtPasahitzaLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtPasahitzaLogin"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtEmailLogin"
+                app:layout_constraintVertical_bias="0.018" />
+
+            <EditText
+                android:id="@+id/etPasahitzaLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:autofillHints="Email"
+                android:ems="10"
+                android:hint="@string/etPasahitzaLogin"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.163"
+                app:layout_constraintStart_toEndOf="@+id/txtPasahitzaLogin"
+                app:layout_constraintTop_toBottomOf="@+id/etEmailLogin" />
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

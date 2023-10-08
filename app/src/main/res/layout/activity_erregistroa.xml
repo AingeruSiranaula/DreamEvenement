@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".Erregistroa">
+
+    <Button
+        android:id="@+id/btnErregistroa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/btnErregistroa"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLeloaErregistroa"
+        android:layout_width="294dp"
+        android:layout_height="237dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="imglogo"
+        android:src="@drawable/leloa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgroupBezeroMotaErregistroa"
+        android:layout_width="313dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLeloaErregistroa">
+
+        <RadioButton
+            android:id="@+id/rbtnEnpresaErregistroa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/rbtnEnpresaErregistroa" />
+
+        <RadioButton
+            android:id="@+id/rbtnPertsonaErregistroa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtnPertsonaErregistroa" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/layoutEnpresa"
+        android:layout_width="415dp"
+        android:layout_height="433dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtNifEnpresaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtNifEnpresaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtNifEnpresaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtNifEnpresaErregistroHint"
+                android:inputType="textPassword"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtEnpresaIzenaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtEnpresaIzenaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtEnpresaIzenaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtEnpresaIzenaErregistroHint"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtNanEnpresaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtNanEnpresaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtNanEnpresaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtNanEnpresaErregistroHint"
+                android:inputType="text"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtEmailEnpresaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtEmailEnpresaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtEmailEnpresaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtEmailEnpresaErregistroHint"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtTelEnpresaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtTelEnpresaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtTelEnpresaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtTelEnpresaErregistroHint"
+                android:inputType="phone"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtPasahitzaEnpresaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtPasahitzaEnpresaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtPasahitzaEnpresaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtPasahitzaEnpresaErregistroHint"
+                android:inputType="textPassword"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtPasahitzaRepEnpresaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtPasahitzaRepEnpresaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtPasahitzaRepEnpresaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtPasahitzaRepEnpresaErregistroHint"
+                android:inputType="textPassword"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPertsona"
+        android:layout_width="411dp"
+        android:layout_height="408dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtPertsonaIzenaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtPertsonaIzenaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtPertsonaIzenaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtPertsonaIzenaErregistroHint"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtNanPertsonaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtNanPertsonaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtNanPertsonaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtNanPertsonaErregistroHint"
+                android:inputType="text"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtEmailPertsonaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtEmailPertsonaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtEmailPertsonaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtEmailPertsonaErregistroHint"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtTelPertsonaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtTelPertsonaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtTelPertsonaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtTelPertsonaErregistroHint"
+                android:inputType="phone"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtPasahitzaPertsonaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtPasahitzaPertsonaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtPasahitzaPertsonaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtPasahitzaPertsonaErregistroHint"
+                android:inputType="textPassword"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtPasahitzaRepPertsonaErregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtPasahitzaRepPertsonaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtPasahitzaRepPertsonaErregistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:hint="@string/txtPasahitzaRepPertsonaErregistroHint"
+                android:inputType="textPassword"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="418dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="612dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:id="@+id/checkEnpresaTerminoak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25sp"
+            android:layout_marginEnd="2sp" />
+
+        <TextView
+            android:id="@+id/txtEnpresaTerminoak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtEnpresaTerminoak"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,12 @@
         android:theme="@style/Theme.DreamEvenement"
         tools:targetApi="31">
         <activity
+            android:name=".TerminoKondizioak"
+            android:exported="false" />
+        <activity
+            android:name=".Erregistroa"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false"
             android:label="@string/title_activity_login"

@@ -13,4 +13,85 @@
     <string name="etPasahitzaLogin">Contraseña</string>
     <string name="btnLogin">INICIAR SESIÓN</string>
     <string name="txtErregistroaLogin"><u>¿No tienes una cuenta? Registrate aquí</u></string>
+
+    // Erregistroa
+    <string name="rbtnPertsonaErregistroa">Pertsona</string>
+    <string name="rbtnEnpresaErregistroa">Empresa</string>
+    <string name="txtEnpresaTerminoak"><u>Aceptas los terminos y condiciones</u></string>
+    <string name="btnErregistroa">Registrar</string>
+    <string name="errorPass">La contraseña es incorrecta</string>
+    <string name="errorField">Hay que rellenar todos los campos</string>
+    // Enpresa
+    <string name="txtEnpresaIzenaErregistro">Nombre completo:</string>
+    <string name="txtEnpresaIzenaErregistroHint">Nombre completo</string>
+    <string name="txtNanEnpresaErregistro">DNI:</string>
+    <string name="txtNanEnpresaErregistroHint">DNI</string>
+    <string name="txtEmailEnpresaErregistro">Email:</string>
+    <string name="txtEmailEnpresaErregistroHint">Email</string>
+    <string name="txtTelEnpresaErregistro">Telefono:</string>
+    <string name="txtTelEnpresaErregistroHint">Telefono</string>
+    <string name="txtPasahitzaEnpresaErregistro">Contraseña:</string>
+    <string name="txtPasahitzaEnpresaErregistroHint">Contraseña</string>
+    <string name="txtPasahitzaRepEnpresaErregistro">Repite la contraseña:</string>
+    <string name="txtPasahitzaRepEnpresaErregistroHint">Repite la contraseña</string>
+    <string name="txtNifEnpresaErregistro">NIF:</string>
+    <string name="txtNifEnpresaErregistroHint">NIF</string>
+    // Pertsona
+    <string name="txtPertsonaIzenaErregistro">Nombre completo:</string>
+    <string name="txtPertsonaIzenaErregistroHint">Nombre completo</string>
+    <string name="txtNanPertsonaErregistro">DNI:</string>
+    <string name="txtNanPertsonaErregistroHint">DNI</string>
+    <string name="txtEmailPertsonaErregistro">Email:</string>
+    <string name="txtEmailPertsonaErregistroHint">Email</string>
+    <string name="txtTelPertsonaErregistro">Telefono:</string>
+    <string name="txtTelPertsonaErregistroHint">Telefono</string>
+    <string name="txtPasahitzaPertsonaErregistro">Contraseña:</string>
+    <string name="txtPasahitzaPertsonaErregistroHint">Contraseña</string>
+    <string name="txtPasahitzaRepPertsonaErregistro">Repite la contraseña:</string>
+    <string name="txtPasahitzaRepPertsonaErregistroHint">Repite la contraseña</string>
+    
+    // Termino eta kondizioak
+    <string name="txtIzenburuTerminoKondizioak"><b>TÉRMINOS Y CONDICIONES DE USO DE LA APLICACIÓN DREAM EVENEMENT</b></string>
+    <string name="txtTerminoak">
+        1. Aceptación de los Términos y Condiciones
+    \n\n
+        1.1. Al utilizar la aplicación móvil "Dream Evenement" ("la Aplicación"), aceptas y te comprometes a cumplir estos Términos y Condiciones de Uso. Si no estás de acuerdo con estos términos, por favor, no utilices la Aplicación.
+    \n\n
+        2. Registro y Cuentas de Usuario
+    \n\n
+        2.1. Registro: Para utilizar ciertas características de la Aplicación, es necesario que te registres y crees una cuenta de usuario. Debes proporcionar información precisa, completa y actualizada durante el proceso de registro.
+    \n\n
+        2.2. Información de Inicio de Sesión: Eres responsable de mantener la confidencialidad de tu información de inicio de sesión (nombre de usuario y contraseña) y de todas las actividades que ocurran bajo tu cuenta de usuario. Si sospechas que tu cuenta ha sido comprometida, debes notificarnos de inmediato.
+    \n\n
+        2.3. Menores de Edad: La Aplicación está destinada a usuarios mayores de 18 años. Si eres menor de edad, necesitas el consentimiento de un padre o tutor legal para utilizar la Aplicación.
+    \n\n
+        3. Reservas de Eventos
+    \n\n
+        3.1. Reservas: La Aplicación permite a los usuarios realizar reservas para eventos. La disponibilidad de eventos y los términos de reserva pueden variar y estar sujetos a cambios sin previo aviso.
+    \n\n
+
+        3.2. Políticas de Eventos: Al realizar una reserva a través de la Aplicación, aceptas las políticas y términos específicos de cada evento, incluyendo, pero sin limitarse a, plazos de cancelación, tarifas aplicables, políticas de reembolso y restricciones.
+    \n\n
+        3.3. Pagos: Los pagos realizados a través de la Aplicación se procesarán de acuerdo con las políticas de pago establecidas por el organizador del evento. Dream Evenement no es responsable de problemas relacionados con pagos o transacciones financieras.
+    \n\n
+        4. Uso Adecuado de la Aplicación
+    \n\n
+        4.1. Conducta del Usuario: Aceptas utilizar la Aplicación de manera responsable y respetuosa. No debes utilizar la Aplicación para actividades ilegales o fraudulentas ni para infringir los derechos de terceros.
+    \n\n
+        4.2. Contenido Generado por el Usuario: Si proporcionas contenido (comentarios, reseñas, imágenes, etc.) a través de la Aplicación, garantizas que tienes los derechos necesarios para compartir dicho contenido y otorgas a Dream Evenement una licencia no exclusiva para utilizar, modificar y mostrar dicho contenido en relación con la Aplicación.
+    \n\n
+        5. Modificaciones y Terminación
+    \n\n
+        5.1. Modificaciones: Dream Evenement se reserva el derecho de modificar estos Términos y Condiciones en cualquier momento. Te notificaremos de cualquier cambio mediante una notificación en la Aplicación o por correo electrónico. El uso continuado de la Aplicación después de la notificación de cambios constituirá tu aceptación de los términos modificados.
+    \n\n
+        5.2. Terminación: Dream Evenement se reserva el derecho de suspender o terminar tu cuenta y tu acceso a la Aplicación en caso de incumplimiento de estos Términos y Condiciones.
+    \n\n
+        6. Privacidad
+    \n\n
+        6.1. Privacidad: Tu privacidad es importante para nosotros. Consulta nuestra Política de Privacidad para obtener información sobre cómo recopilamos, utilizamos y protegemos tus datos personales.
+    \n\n
+        7. Limitación de Responsabilidad
+    \n\n
+        7.1. Exención de Responsabilidad: Dream Evenement no se hace responsable de los eventos o servicios ofrecidos a través de la Aplicación, ni de los problemas que puedan surgir en relación con los mismos. La Aplicación se proporciona tal cual y según disponibilidad.
+    </string>
 </resources>
