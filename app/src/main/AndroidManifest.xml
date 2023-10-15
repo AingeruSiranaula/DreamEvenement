@@ -13,6 +13,15 @@
         android:theme="@style/Theme.DreamEvenement"
         tools:targetApi="31">
         <activity
+            android:name=".Perfila"
+            android:exported="false" />
+        <activity
+            android:name=".Eskontzak"
+            android:exported="false" />
+        <activity
+            android:name=".Etxea"
+            android:exported="false" />
+        <activity
             android:name=".TerminoKondizioak"
             android:exported="false" />
         <activity

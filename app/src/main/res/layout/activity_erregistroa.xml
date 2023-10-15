@@ -11,13 +11,12 @@
         android:id="@+id/btnErregistroa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="56dp"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/btnErregistroa"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -60,8 +59,8 @@
 
     <LinearLayout
         android:id="@+id/layoutEnpresa"
-        android:layout_width="415dp"
-        android:layout_height="433dp"
+        android:layout_width="413dp"
+        android:layout_height="491dp"
         android:layout_marginBottom="4dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -92,7 +91,7 @@
                 android:layout_marginEnd="25sp"
                 android:layout_weight="1"
                 android:hint="@string/txtNifEnpresaErregistroHint"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
 
@@ -119,6 +118,7 @@
                 android:layout_marginEnd="25sp"
                 android:layout_weight="1"
                 android:hint="@string/txtEnpresaIzenaErregistroHint"
+                android:inputType="text"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
 
@@ -260,14 +260,13 @@
 
     <LinearLayout
         android:id="@+id/layoutPertsona"
-        android:layout_width="411dp"
-        android:layout_height="408dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="415dp"
+        android:layout_height="433dp"
+        android:layout_marginBottom="56dp"
         android:orientation="vertical"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
@@ -435,10 +434,10 @@
     <LinearLayout
         android:layout_width="418dp"
         android:layout_height="45dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginTop="620dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

@@ -7,10 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Erregistroa extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -31,6 +32,9 @@ public class Erregistroa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_erregistroa);
 
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        //  Layout
         LinearLayout layoutEnpresa = findViewById(R.id.layoutEnpresa);
         LinearLayout layoutPertsona = findViewById(R.id.layoutPertsona);
         RadioGroup radioGroup = findViewById(R.id.rgroupBezeroMotaErregistroa);
@@ -39,6 +43,8 @@ public class Erregistroa extends AppCompatActivity {
         TextView txtEnpresaTerminoak = findViewById(R.id.txtEnpresaTerminoak);
 
         Button btnErregistroa = findViewById(R.id.btnErregistroa);
+
+        CheckBox checkEnpresaTerminoak = findViewById(R.id.checkEnpresaTerminoak);
 
         // Enpresa datuak
         EditText nifEnpresa = findViewById(R.id.edtNifEnpresaErregistro);
@@ -62,41 +68,56 @@ public class Erregistroa extends AppCompatActivity {
             public void onClick(View view) {
                 int duration = Toast.LENGTH_SHORT;
 
+                // Errore mezuak
                 Toast error_message = Toast.makeText(Erregistroa.this, getString(R.string.errorField), duration);
                 Toast error_message_contra = Toast.makeText(Erregistroa.this, getString(R.string.errorPass), duration);
+                Toast error_terms = Toast.makeText(Erregistroa.this, getString(R.string.errorTerms), duration);
 
+                // Erremu guztiak bete behar dira
                 if(!nifEnpresa.getText().toString().isEmpty() & !izenaEnpresa.getText().toString().isEmpty() & !nanEnpresa.getText().toString().isEmpty() & !emailEnpresa.getText().toString().isEmpty() & !telEnpresa.getText().toString().isEmpty() & !pasEnpresa.getText().toString().isEmpty() & !pasRepEnpresa.getText().toString().isEmpty() | !izenaPertsona.getText().toString().isEmpty() & !nanPertsona.getText().toString().isEmpty() & !emailPertsona.getText().toString().isEmpty() & !telPertsona.getText().toString().isEmpty() & !pasPertsona.getText().toString().isEmpty() & !pasRepPertsona.getText().toString().isEmpty()){
-                    if(pasEnpresa.getText().toString().equals(pasRepEnpresa.getText().toString()) | pasPertsona.getText().toString().equals(pasRepPertsona.getText().toString())){
-                        mAuth = FirebaseAuth.getInstance();
+                    // Pasahitza eremuak berdinak izan behar dira
+                    if(pasEnpresa.getText().toString().equals(pasRepEnpresa.getText().toString()) & !pasEnpresa.getText().toString().isEmpty() & !pasRepEnpresa.getText().toString().isEmpty() | pasPertsona.getText().toString().equals(pasRepPertsona.getText().toString()) & !pasPertsona.getText().toString().isEmpty() & !pasRepPertsona.getText().toString().isEmpty()){
+                        if(checkEnpresaTerminoak.isChecked()){
+                            mAuth = FirebaseAuth.getInstance();
 
-                        boolean egoera = rbtnEnpresa.isChecked();
-                        String email;
-                        String pasahitza;
-                        if(egoera){
-                            email = emailEnpresa.getText().toString();
-                            pasahitza = pasEnpresa.getText().toString();
-                        }else{
-                            email = emailPertsona.getText().toString();
-                            pasahitza = pasPertsona.getText().toString();
-                        }
+                            String email;
+                            String pasahitza;
+                            if(rbtnEnpresa.isChecked()){
+                                email = emailEnpresa.getText().toString();
+                                pasahitza = pasEnpresa.getText().toString();
+                                Erabiltzailea e = new Erabiltzailea(emailEnpresa.getText().toString(), pasEnpresa.getText().toString(), nanEnpresa.getText().toString(), izenaEnpresa.getText().toString(), telEnpresa.getText().toString(), nifEnpresa.getText().toString(), true);
+                                db.collection("Erabiltzaileak").document(email).set(e);
+                            }else{
+                                email = emailPertsona.getText().toString();
+                                pasahitza = pasPertsona.getText().toString();
+                                Erabiltzailea e = new Erabiltzailea(emailPertsona.getText().toString(), pasPertsona.getText().toString(), nanPertsona.getText().toString(), izenaPertsona.getText().toString(), telPertsona.getText().toString(), "", false);
+                                db.collection("Erabiltzaileak").document(email).set(e);
+                            }
 
-                        mAuth.createUserWithEmailAndPassword(email,pasahitza)
-                                .addOnCompleteListener(Erregistroa.this, new OnCompleteListener<AuthResult>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<AuthResult> task) {
-                                        if (task.isSuccessful()) {
-                                            // Sign in success, update UI with the signed-in user's information
-                                            Log.d(TAG, "createUserWithEmail:success");
-                                            FirebaseUser user = mAuth.getCurrentUser();
-                                        } else {
-                                            // If sign in fails, display a message to the user.
-                                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                                            Toast.makeText(Erregistroa.this, "Authentication failed.",
-                                                    Toast.LENGTH_SHORT).show();
+                            mAuth.createUserWithEmailAndPassword(email,pasahitza)
+                                    .addOnCompleteListener(Erregistroa.this, new OnCompleteListener<AuthResult>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<AuthResult> task) {
+                                            if (task.isSuccessful()) {
+                                                // Sign in success, update UI with the signed-in user's information
+                                                Log.d(TAG, "createUserWithEmail:success");
+                                                Intent intent = new Intent(Erregistroa.this, Etxea.class);
+                                                startActivity(intent);
+                                            } else {
+                                                // If sign in fails, display a message to the user.
+                                                Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                                                Toast.makeText(Erregistroa.this, "Authentication failed.",
+                                                        Toast.LENGTH_SHORT).show();
+                                            }
                                         }
-                                    }
-                                });
-
+                                    });
+                        }else{
+                            error_terms.show();
+                            Log.e(TAG, "ERROR");
+                        }
+                    }else{
+                        error_message_contra.show();
+                        Log.e(TAG, "ERROR");
                     }
                 }else{
                     error_message.show();

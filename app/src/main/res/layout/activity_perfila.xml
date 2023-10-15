@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".Perfila">
+
+    <Button
+        android:id="@+id/btnEzeztatuPerfila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/btnEzeztatuPerfila"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEnpresaPerfila"
+        app:layout_constraintVertical_bias="0.46" />
+
+    <Button
+        android:id="@+id/btnGordePerfila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/btnGordePerfila"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnEzeztatuPerfila"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEnpresaPerfila"
+        app:layout_constraintVertical_bias="0.46" />
+
+    <Button
+        android:id="@+id/btnEditatuPerfila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/btnEditatuPerfila"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEnpresaPerfila"
+        app:layout_constraintVertical_bias="0.46" />
+
+    <LinearLayout
+        android:id="@+id/layoutEnpresaPerfila"
+        android:layout_width="410dp"
+        android:layout_height="285dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtNifEnpresaPerfila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtNifEnpresaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtNifEnpresaPerfila"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="@string/txtNifEnpresaErregistroHint"
+                android:inputType="none"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtEnpresaIzenaPerfila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtEnpresaIzenaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtEnpresaIzenaPerfila"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="@string/txtEnpresaIzenaErregistroHint"
+                android:inputType="none"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtNanEnpresaPerfila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtNanEnpresaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtNanEnpresaPerfila"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="@string/txtNanEnpresaErregistroHint"
+                android:inputType="none"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtEmailEnpresaPerfila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtEmailEnpresaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtEmailEnpresaPerfila"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="@string/txtEmailEnpresaErregistroHint"
+                android:inputType="none"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtTelEnpresaPerfila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtTelEnpresaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtTelEnpresaPerfila"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="@string/txtTelEnpresaErregistroHint"
+                android:inputType="none"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtPasahitzaEnpresaPerfila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="15sp"
+                android:text="@string/txtPasahitzaEnpresaErregistro"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtPasahitzaEnpresaPerfila"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25sp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="@string/txtPasahitzaEnpresaErregistroHint"
+                android:inputType="none"
+                android:textColorHint="@color/grey" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
