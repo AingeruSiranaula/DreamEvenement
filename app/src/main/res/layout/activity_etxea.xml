@@ -4,31 +4,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Etxea">
+    tools:context=".Etxea"
+    android:background="@color/beige">
+
 
     <ImageButton
-        android:id="@+id/imgbtnEskontzaEtxea"
-        android:layout_width="158dp"
-        android:layout_height="123dp"
-        android:layout_marginTop="60dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/leloa"
+        android:id="@+id/imgGoitibeherakoaMenuaIreki"
+        android:background="@android:color/transparent"
+        android:layout_width="61dp"
+        android:layout_height="45dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/desplegable"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
-    <ImageButton
-        android:id="@+id/imgbtnPerfilaEtxea"
-        android:layout_width="63dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/leloa"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
+    <LinearLayout
+        android:id="@+id/linearLayoutMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/buttonColor"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <ImageButton
+            android:id="@+id/imgGoitibeherakoaMenuaItxi"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="20sp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/desplegable" />
+
+        <LinearLayout
+            android:layout_width="275sp"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgBtnProfila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/usuario" />
+
+            <Button
+                android:id="@+id/btnProfila"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="@color/black"
+                android:text="@string/btnProfila"
+                android:textAlignment="textStart" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="275sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="25sp"
+            android:layout_marginBottom="20sp"
+            android:background="@color/buttonColor"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgBtnEzkontzak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/alianza" />
+
+            <Button
+                android:id="@+id/btnEzkontzak"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="@color/black"
+                android:text="@string/btnEzkontza"
+                android:textAlignment="textStart" />
+
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
