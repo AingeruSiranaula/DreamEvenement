@@ -97,6 +97,10 @@
         7.1. Exención de Responsabilidad: Dream Evenement no se hace responsable de los eventos o servicios ofrecidos a través de la Aplicación, ni de los problemas que puedan surgir en relación con los mismos. La Aplicación se proporciona tal cual y según disponibilidad.
     </string>
 
+
+    //etxea
+    <string name="btnProfila">Perfil</string>
+    <string name="btnEzkontza">Bodas</string>
     // Perfila
     <string name="btnEditatuPerfila">EDITAR</string>
     <string name="btnGordePerfila">GUARDAR</string>
