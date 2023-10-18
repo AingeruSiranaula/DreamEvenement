@@ -4,6 +4,7 @@ import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -37,22 +38,15 @@ public class Perfila extends AppCompatActivity {
         Toast message_update = Toast.makeText(Perfila.this, getString(R.string.messageUpdate), duration);
 
         // Layout elementuak
-        Button btnEzeztatuPerfila = findViewById(R.id.btnEzeztatuPerfila);
+        Button btnLogOut = findViewById(R.id.btnLogOut);
         Button btnGordePerfila = findViewById(R.id.btnGordePerfila);
         Button btnEditatuPerfila = findViewById(R.id.btnEditatuPerfila);
 
         EditText nifEnpresa = findViewById(R.id.edtNifEnpresaPerfila);
         EditText izenaEnpresa = findViewById(R.id.edtEnpresaIzenaPerfila);
-        EditText pasEnpresa = findViewById(R.id.edtPasahitzaEnpresaPerfila);
         EditText emailEnpresa = findViewById(R.id.edtEmailEnpresaPerfila);
         EditText telEnpresa = findViewById(R.id.edtTelEnpresaPerfila);
         EditText nanEnpresa = findViewById(R.id.edtNanEnpresaPerfila);
-
-        //  Aldagai finalak
-        final String[] izena = new String[1];
-        final String[] email = new String[1];
-        final String[] tel = new String[1];
-        final String[] pas = new String[1];
 
         // Erabiltzailearen datuk datu basetik hartu
         DocumentReference docRef = db.collection("Erabiltzaileak").document(currentUser.getEmail());
@@ -66,13 +60,7 @@ public class Perfila extends AppCompatActivity {
                 izenaEnpresa.setText(e.getIzena());
                 emailEnpresa.setText(e.getEmail());
                 telEnpresa.setText(e.getTelefonoa());
-                pasEnpresa.setText(e.getPasahitza());
                 nanEnpresa.setText(e.getNan());
-
-                izena[0] = e.getNif();
-                email[0] = e.getEmail();
-                tel[0] = e.getTelefonoa();
-                pas[0] = e.getPasahitza();
             }
         });
 
@@ -83,14 +71,12 @@ public class Perfila extends AppCompatActivity {
                 // Botoiak izkutatu/erakutsi
                 btnEditatuPerfila.setVisibility(View.INVISIBLE);
                 btnGordePerfila.setVisibility(View.VISIBLE);
-                btnEzeztatuPerfila.setVisibility(View.VISIBLE);
 
                 // Editagarrariak bihurtu
                 izenaEnpresa.setEnabled(true);
                 emailEnpresa.setEnabled(true);
                 telEnpresa.setEnabled(true);
-                pasEnpresa.setEnabled(true);
-                //Log.i(TAG, currentUser.getEmail());
+                Log.i(TAG, currentUser.getEmail());
             }
         });
 
@@ -98,22 +84,20 @@ public class Perfila extends AppCompatActivity {
         btnGordePerfila.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!izenaEnpresa.getText().toString().isEmpty() & !emailEnpresa.getText().toString().isEmpty() & !telEnpresa.getText().toString().isEmpty() & !pasEnpresa.getText().toString().isEmpty()){
+                if(!izenaEnpresa.getText().toString().isEmpty() & !emailEnpresa.getText().toString().isEmpty() & !telEnpresa.getText().toString().isEmpty()){
                     // Botoiak izkutatu/erakutsi
                     btnEditatuPerfila.setVisibility(View.VISIBLE);
                     btnGordePerfila.setVisibility(View.INVISIBLE);
-                    btnEzeztatuPerfila.setVisibility(View.INVISIBLE);
                     message_update.show();
 
                     // erabiltzailea sortu eta datu baseko informazioa eguneratu
-                    Erabiltzailea e = new Erabiltzailea(emailEnpresa.getText().toString(), pasEnpresa.getText().toString(), nanEnpresa.getText().toString(), izenaEnpresa.getText().toString(), telEnpresa.getText().toString(), nifEnpresa.getText().toString(), true);
+                    Erabiltzailea e = new Erabiltzailea(emailEnpresa.getText().toString(), nanEnpresa.getText().toString(), izenaEnpresa.getText().toString(), telEnpresa.getText().toString(), nifEnpresa.getText().toString(), true);
                     db.collection("Erabiltzaileak").document(emailEnpresa.getText().toString()).set(e);
 
                     // Editagarritasuna kendu
                     izenaEnpresa.setEnabled(false);
                     emailEnpresa.setEnabled(false);
                     telEnpresa.setEnabled(false);
-                    pasEnpresa.setEnabled(false);
                 }else{
                     error_field.show();
                     Log.e(TAG, "ERROR");
@@ -121,26 +105,13 @@ public class Perfila extends AppCompatActivity {
             }
         });
 
-        // Ezeztatu botoia
-        btnEzeztatuPerfila.setOnClickListener(new View.OnClickListener() {
+        // Sesioa ixteko botoia
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Botoiak izkutatu/erakutsi
-                btnEditatuPerfila.setVisibility(View.VISIBLE);
-                btnGordePerfila.setVisibility(View.INVISIBLE);
-                btnEzeztatuPerfila.setVisibility(View.INVISIBLE);
-
-                // Egindako aldaketak ezeztatu
-                izenaEnpresa.setText(izena[0]);
-                emailEnpresa.setText(email[0]);
-                telEnpresa.setText(tel[0]);
-                pasEnpresa.setText(pas[0]);
-
-                // Editagarritasuna kendu
-                izenaEnpresa.setEnabled(false);
-                emailEnpresa.setEnabled(false);
-                telEnpresa.setEnabled(false);
-                pasEnpresa.setEnabled(false);
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(Perfila.this, Etxea.class);
+                startActivity(intent);
             }
         });
     }

@@ -85,12 +85,12 @@ public class Erregistroa extends AppCompatActivity {
                             if(rbtnEnpresa.isChecked()){
                                 email = emailEnpresa.getText().toString();
                                 pasahitza = pasEnpresa.getText().toString();
-                                Erabiltzailea e = new Erabiltzailea(emailEnpresa.getText().toString(), pasEnpresa.getText().toString(), nanEnpresa.getText().toString(), izenaEnpresa.getText().toString(), telEnpresa.getText().toString(), nifEnpresa.getText().toString(), true);
+                                Erabiltzailea e = new Erabiltzailea(emailEnpresa.getText().toString(), nanEnpresa.getText().toString(), izenaEnpresa.getText().toString(), telEnpresa.getText().toString(), nifEnpresa.getText().toString(), true);
                                 db.collection("Erabiltzaileak").document(email).set(e);
                             }else{
                                 email = emailPertsona.getText().toString();
                                 pasahitza = pasPertsona.getText().toString();
-                                Erabiltzailea e = new Erabiltzailea(emailPertsona.getText().toString(), pasPertsona.getText().toString(), nanPertsona.getText().toString(), izenaPertsona.getText().toString(), telPertsona.getText().toString(), "", false);
+                                Erabiltzailea e = new Erabiltzailea(emailPertsona.getText().toString(), nanPertsona.getText().toString(), izenaPertsona.getText().toString(), telPertsona.getText().toString(), "", false);
                                 db.collection("Erabiltzaileak").document(email).set(e);
                             }
 

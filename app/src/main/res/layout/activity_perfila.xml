@@ -8,35 +8,33 @@
     tools:context=".Perfila">
 
     <Button
-        android:id="@+id/btnEzeztatuPerfila"
+        android:id="@+id/btnLogOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="76dp"
         android:backgroundTint="@color/buttonColor"
-        android:text="@string/btnEzeztatuPerfila"
+        android:text="@string/btnLogOut"
         android:textColor="@color/black"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layoutEnpresaPerfila"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutEnpresaPerfila"
-        app:layout_constraintVertical_bias="0.46" />
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
 
     <Button
         android:id="@+id/btnGordePerfila"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
         android:layout_marginBottom="76dp"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/btnGordePerfila"
         android:textColor="@color/black"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnEzeztatuPerfila"
-        app:layout_constraintHorizontal_bias="0.614"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutEnpresaPerfila"
-        app:layout_constraintVertical_bias="0.46" />
+        app:layout_constraintVertical_bias="0.079" />
 
     <Button
         android:id="@+id/btnEditatuPerfila"
@@ -48,10 +46,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutEnpresaPerfila"
-        app:layout_constraintVertical_bias="0.46" />
+        app:layout_constraintVertical_bias="0.079" />
 
     <LinearLayout
         android:id="@+id/layoutEnpresaPerfila"
@@ -202,34 +200,6 @@
                 android:layout_weight="1"
                 android:enabled="false"
                 android:hint="@string/txtTelEnpresaErregistroHint"
-                android:inputType="none"
-                android:textColorHint="@color/grey" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/txtPasahitzaEnpresaPerfila"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="25sp"
-                android:layout_marginEnd="15sp"
-                android:text="@string/txtPasahitzaEnpresaErregistro"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/edtPasahitzaEnpresaPerfila"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="25sp"
-                android:layout_weight="1"
-                android:enabled="false"
-                android:hint="@string/txtPasahitzaEnpresaErregistroHint"
                 android:inputType="none"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
