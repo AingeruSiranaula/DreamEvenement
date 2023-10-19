@@ -10,9 +10,9 @@
 
     <ImageButton
         android:id="@+id/imgGoitibeherakoaMenuaIreki"
-        android:background="@android:color/transparent"
         android:layout_width="61dp"
         android:layout_height="45dp"
+        android:background="@android:color/transparent"
         android:scaleType="centerInside"
         android:src="@drawable/desplegable"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,8 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/buttonColor"
-        android:visibility="invisible"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -67,9 +67,9 @@
                 android:layout_width="200sp"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:textColor="@color/black"
                 android:text="@string/btnProfila"
-                android:textAlignment="textStart" />
+                android:textAlignment="textStart"
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
@@ -95,9 +95,9 @@
                 android:layout_width="200sp"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:textColor="@color/black"
                 android:text="@string/btnEzkontza"
-                android:textAlignment="textStart" />
+                android:textAlignment="textStart"
+                android:textColor="@color/black" />
 
         </LinearLayout>
     </LinearLayout>

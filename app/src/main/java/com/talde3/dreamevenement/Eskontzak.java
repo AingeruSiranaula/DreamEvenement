@@ -5,9 +5,13 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -53,7 +57,26 @@ public class Eskontzak extends AppCompatActivity {
                                 eskontzaList.add(eskontza);
                             }
 
+                            LinearLayout layout = findViewById(R.id.layoutEskontzak);
+
+                            //Eskontza bakoitzeko botoi berri bat sortzen da beraren izenarekin, qtea gainera Datu Basean daukan Id-a ematen dio
+                            //activity_eskontzak.xml-ean sortutako
                             for (Eskontza eskontza : eskontzaList) {
+                                Button botoia = new Button(Eskontzak.this);
+                                botoia.setText(eskontza.getIzena());
+                                botoia.setId(eskontza.getId());
+                                botoia.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT
+                                ));
+                                layout.addView(botoia);
+
+                                //Sortutako botoien funtzionalitatea
+//                                botoia.setOnClickListener(new View.OnClickListener() {
+//                                    @Override
+//                                    public void onClick(View v) {
+//                                        Intent intent = new Intent(Eskontzak.this, TerminoKondizioak.class);
+//                                        startActivity(intent);
+//                                    }
+//                                });
                             }
 
                         } else {
