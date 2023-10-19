@@ -91,6 +91,7 @@
                 android:layout_marginEnd="25sp"
                 android:layout_weight="1"
                 android:hint="@string/txtNifEnpresaErregistroHint"
+                android:textColor="@color/black"
                 android:inputType="text"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
@@ -118,6 +119,7 @@
                 android:layout_marginEnd="25sp"
                 android:layout_weight="1"
                 android:hint="@string/txtEnpresaIzenaErregistroHint"
+                android:textColor="@color/black"
                 android:inputType="text"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
@@ -145,6 +147,7 @@
                 android:layout_marginEnd="25sp"
                 android:layout_weight="1"
                 android:hint="@string/txtNanEnpresaErregistroHint"
+                android:textColor="@color/black"
                 android:inputType="text"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
@@ -172,6 +175,7 @@
                 android:layout_marginEnd="25sp"
                 android:layout_weight="1"
                 android:hint="@string/txtEmailEnpresaErregistroHint"
+                android:textColor="@color/black"
                 android:inputType="textEmailAddress"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
@@ -199,6 +203,7 @@
                 android:layout_marginEnd="25sp"
                 android:layout_weight="1"
                 android:hint="@string/txtTelEnpresaErregistroHint"
+                android:textColor="@color/black"
                 android:inputType="phone"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
@@ -226,6 +231,7 @@
                 android:layout_marginEnd="25sp"
                 android:layout_weight="1"
                 android:hint="@string/txtPasahitzaEnpresaErregistroHint"
+                android:textColor="@color/black"
                 android:inputType="textPassword"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
@@ -253,6 +259,7 @@
                 android:layout_marginEnd="25sp"
                 android:layout_weight="1"
                 android:hint="@string/txtPasahitzaRepEnpresaErregistroHint"
+                android:textColor="@color/black"
                 android:inputType="textPassword"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
@@ -292,6 +299,7 @@
                 android:layout_marginEnd="25sp"
                 android:layout_weight="1"
                 android:hint="@string/txtPertsonaIzenaErregistroHint"
+                android:textColor="@color/black"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
 
@@ -319,6 +327,7 @@
                 android:layout_weight="1"
                 android:hint="@string/txtNanPertsonaErregistroHint"
                 android:inputType="text"
+                android:textColor="@color/black"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
 
@@ -346,6 +355,7 @@
                 android:layout_weight="1"
                 android:hint="@string/txtEmailPertsonaErregistroHint"
                 android:inputType="textEmailAddress"
+                android:textColor="@color/black"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
 
@@ -373,6 +383,7 @@
                 android:layout_weight="1"
                 android:hint="@string/txtTelPertsonaErregistroHint"
                 android:inputType="phone"
+                android:textColor="@color/black"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
 
@@ -400,6 +411,7 @@
                 android:layout_weight="1"
                 android:hint="@string/txtPasahitzaPertsonaErregistroHint"
                 android:inputType="textPassword"
+                android:textColor="@color/black"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
 
@@ -427,6 +439,7 @@
                 android:layout_weight="1"
                 android:hint="@string/txtPasahitzaRepPertsonaErregistroHint"
                 android:inputType="textPassword"
+                android:textColor="@color/black"
                 android:textColorHint="@color/grey" />
         </LinearLayout>
     </LinearLayout>

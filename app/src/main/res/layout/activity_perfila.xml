@@ -8,6 +8,20 @@
     tools:context=".Perfila">
 
     <Button
+        android:id="@+id/btnKontuaEzabatu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/btnKontuaEzabatu"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEnpresaPerfila"
+        app:layout_constraintVertical_bias="0.453" />
+
+    <Button
         android:id="@+id/btnLogOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

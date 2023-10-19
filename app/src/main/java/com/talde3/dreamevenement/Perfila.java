@@ -2,8 +2,10 @@ package com.talde3.dreamevenement;
 
 import static android.content.ContentValues.TAG;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -110,9 +112,49 @@ public class Perfila extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(Perfila.this, Etxea.class);
+                Intent intent = new Intent(Perfila.this, Login.class);
                 startActivity(intent);
             }
         });
+
+        Button btnKontuaEzabatu = findViewById(R.id.btnKontuaEzabatu);
+        btnKontuaEzabatu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Behean egindako metodoari deitzen dio ezabatu kontua botoia klikatzen duzunean
+                mostrarDialogoDeConfirmacion();
+            }
+        });
+    }
+
+    private void mostrarDialogoDeConfirmacion() {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getString(R.string.app_name));
+        builder.setMessage(getString(R.string.ezabatuMezua));
+
+        builder.setPositiveButton(getString(R.string.baiKontuaEzabatu), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Hemen kontua ezabatuko da
+                currentUser.delete();
+                // Behin kontua ezabatu denean Login pantailara eramango zaizu
+                Intent intent = new Intent(Perfila.this, Login.class);
+                startActivity(intent);
+            }
+        });
+
+        builder.setNegativeButton(getString(R.string.kantzelatu), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Ematen badiozu kantzelatu botoiari ez da ezer gertatuko eta mezua desagertuko da
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

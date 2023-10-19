@@ -6,34 +6,40 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/leloa"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DreamEvenement"
         tools:targetApi="31">
         <activity
             android:name=".Perfila"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Eskontzak"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Etxea"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".TerminoKondizioak"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Erregistroa"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Login"
+            android:screenOrientation="portrait"
             android:exported="false"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.DreamEvenement" />
         <activity
             android:name=".Hasiera"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
