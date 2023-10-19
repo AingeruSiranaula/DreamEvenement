@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DreamEvenement"
         tools:targetApi="31">
+
+        <!-- android:screenOrientation="portrait" sartuta dago activity guztietan pantaila ez biratzeko -->
+
         <activity
             android:name=".Perfila"
             android:screenOrientation="portrait"
