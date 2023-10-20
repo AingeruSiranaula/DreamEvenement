@@ -106,9 +106,9 @@
     <string name="btnGordePerfila">GUARDAR</string>
     <string name="btnEzeztatuPerfila">CANCELAR</string>
     <string name="btnKontuaEzabatu">Borrar cuenta</string>
+    <string name="btnLogOut">Cerrar sesión</string>
     // Erroreak Perfila
     <string name="messageUpdate">Los datos se han actualizado</string>
-    <string name="btnLogOut">Cerrar sesión</string>
 
     //ezabatu kontuaren abisua
     <string name="ezabatuMezua">¿Estás seguro de que deseas borrar tu cuenta? Esta acción no se puede deshacer.</string>
