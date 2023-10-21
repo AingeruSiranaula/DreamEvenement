@@ -10,14 +10,16 @@ public class Eskontza implements Serializable {
     private int id;
     private String izena;
     private ArrayList<Number> prezioak;
+    private String argazkia;
 
     // Constructor
-    public Eskontza(String deskribapena, ArrayList<Number> gonbidatuak, int id, String izena, ArrayList<Number> prezioak) {
+    public Eskontza(String deskribapena, ArrayList<Number> gonbidatuak, int id, String izena, ArrayList<Number> prezioak, String argazkia) {
         this.deskribapena = deskribapena;
         this.gonbidatuak = gonbidatuak;
         this.id = id;
         this.izena = izena;
         this.prezioak = prezioak;
+        this.argazkia= argazkia;
     }
 
     public Eskontza() {
@@ -44,6 +46,8 @@ public class Eskontza implements Serializable {
         return prezioak;
     }
 
+    public String getArgazkia (){ return argazkia;}
+
     // Settters
     public void setDeskribapena(String deskribapena) {
         this.deskribapena = deskribapena;
@@ -64,4 +68,6 @@ public class Eskontza implements Serializable {
     public void setPrezioak(ArrayList<Number> prezioak) {
         this.prezioak = prezioak;
     }
+
+    public void setArgazkia (String argazkia){this.argazkia=argazkia;}
 }

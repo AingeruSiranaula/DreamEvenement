@@ -6,6 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -53,9 +56,10 @@ public class Eskontzak extends AppCompatActivity {
                                 int id = document.getLong("Id").intValue();
                                 String izena = document.getString("Izena");
                                 ArrayList<Number> prezioak = (ArrayList<Number>) document.get("Prezioak");
+                                String argazkia = document.getString("Argazkia");
 
                                 // Eskontza berri bat sortu lortutako datuekin
-                                Eskontza eskontza = new Eskontza(deskribapena, gonbidatuak, id, izena, prezioak);
+                                Eskontza eskontza = new Eskontza(deskribapena, gonbidatuak, id, izena, prezioak, argazkia);
                                 // ArrayList barruan sartu sortutako eskontza
                                 eskontzaList.add(eskontza);
                             }
@@ -66,9 +70,19 @@ public class Eskontzak extends AppCompatActivity {
                             //activity_eskontzak.xml-ean sortutako
                             for (Eskontza eskontza : eskontzaList) {
                                 ImageButton botoia = new ImageButton(Eskontzak.this);
-                                botoia.setImageResource(R.drawable.leloa);
+                                String argazkia = eskontza.getArgazkia();
+                                int idImagen = getResources().getIdentifier(argazkia, "drawable", getPackageName());
+                                botoia.setImageResource(idImagen);
                                 botoia.setId(eskontza.getId());
-                                botoia.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 400));
+
+                                //Argazkia botoiaren tamanaira ajutatuko da
+                                botoia.setScaleType(ImageView.ScaleType.FIT_CENTER);
+
+                                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 600);
+                                layoutParams.setMargins(0, 0, 0, 20);
+                                botoia.setLayoutParams(layoutParams);
+                                 botoia.setBackgroundResource(android.R.color.transparent);
+
                                 layout.addView(botoia);
 
                                 //Sortutako botoien funtzionalitatea
