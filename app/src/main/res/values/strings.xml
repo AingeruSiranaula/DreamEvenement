@@ -102,6 +102,8 @@
     // Etxea
     <string name="btnProfila">Perfil</string>
     <string name="btnEzkontza">Bodas</string>
+    <string name="btnUrtebetezea">Urtebetzea</string>
+
 
     // Perfila
     <string name="btnEditatuPerfila">EDITAR</string>

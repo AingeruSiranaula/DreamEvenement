@@ -7,10 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
-import android.widget.LinearLayout;
-
-import java.util.ArrayList;
 
 public class TerminoKondizioak extends AppCompatActivity {
 
@@ -21,7 +17,7 @@ public class TerminoKondizioak extends AppCompatActivity {
 
         Intent intent = this.getIntent();
         Bundle bundle = intent.getExtras();
-        Eskontza e =  (Eskontza)bundle.getSerializable("eskontza_id");
+        Ekitaldia e =  (Ekitaldia)bundle.getSerializable("eskontza_id");
 
         Log.i(TAG, e.getIzena());
     }

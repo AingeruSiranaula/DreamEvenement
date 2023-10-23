@@ -24,7 +24,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class Eskontzak extends AppCompatActivity {
+public class Urtebetetzeak extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +34,13 @@ public class Eskontzak extends AppCompatActivity {
         setContentView(R.layout.activity_eskontzak);
 
 
-        db.collection("Eskontzak")
+        db.collection("Urtebetetzeak")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-                            ArrayList<Ekitaldia> eskontzaList = new ArrayList<>(); // ArrayList non egongo diren gordeta Eskontza deberdinak
+                            ArrayList<Ekitaldia> urtebetetzeaList = new ArrayList<>(); // ArrayList non egongo diren gordeta Eskontza deberdinak
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 // Recupera los datos del documento de Firestore
@@ -52,25 +52,25 @@ public class Eskontzak extends AppCompatActivity {
                                 String argazkia = document.getString("Argazkia");
 
                                 // Eskontza berri bat sortu lortutako datuekin
-                                Ekitaldia eskontza = new Ekitaldia(deskribapena, gonbidatuak, id, izena, prezioak, argazkia);
+                                Ekitaldia urtebetetzea = new Ekitaldia(deskribapena, gonbidatuak, id, izena, prezioak, argazkia);
                                 // ArrayList barruan sartu sortutako eskontza
-                                eskontzaList.add(eskontza);
+                                urtebetetzeaList.add(urtebetetzea);
                             }
 
                             LinearLayout layout = findViewById(R.id.layoutEskontzak);
 
                             //Eskontza bakoitzeko botoi berri bat sortzen da beraren izenarekin, qtea gainera Datu Basean daukan Id-a ematen dio
                             //activity_eskontzak.xml-ean sortutako
-                            for (Ekitaldia eskontza : eskontzaList) {
-                                ImageButton botoia = new ImageButton(Eskontzak.this);
-                                String argazkia = eskontza.getArgazkia();
+                            for (Ekitaldia urtebetetzea : urtebetetzeaList) {
+                                ImageButton botoia = new ImageButton(Urtebetetzeak.this);
+                                String argazkia = urtebetetzea.getArgazkia();
                                 int idImagen = getResources().getIdentifier(argazkia, "drawable", getPackageName());
                                 botoia.setImageResource(idImagen);
-                                botoia.setId(eskontza.getId());
+                                botoia.setId(urtebetetzea.getId());
 
                                 //Lekuen izena textview batean sartu
-                                TextView izenaTextView = new TextView(Eskontzak.this);
-                                izenaTextView.setText(eskontza.getIzena());
+                                TextView izenaTextView = new TextView(Urtebetetzeak.this);
+                                izenaTextView.setText(urtebetetzea.getIzena());
                                 izenaTextView.setTextColor(Color.BLACK);
                                 izenaTextView.setTextSize(20);
                                 izenaTextView.setGravity(Gravity.CENTER);
@@ -90,14 +90,14 @@ public class Eskontzak extends AppCompatActivity {
                                 layout.addView(botoia);
 
                                 //Sortutako botoien funtzionalitatea
-                                botoia.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        Intent intent = new Intent(Eskontzak.this, TerminoKondizioak.class);
-                                        intent.putExtra("eskontza_id", eskontza);
-                                        startActivity(intent);
-                                    }
-                                });
+//                                botoia.setOnClickListener(new View.OnClickListener() {
+//                                    @Override
+//                                    public void onClick(View v) {
+//                                        Intent intent = new Intent(Urtebetetzeak.this, TerminoKondizioak.class);
+//                                        intent.putExtra("urtebetetzea_id", urtebetetzea);
+//                                        startActivity(intent);
+//                                    }
+//                                });
                             }
 
                         } else {

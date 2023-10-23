@@ -140,6 +140,7 @@ public class Perfila extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // Hemen kontua ezabatuko da
+                db.collection("Erabiltzaileak").document(currentUser.getEmail()).delete();
                 currentUser.delete();
                 // Behin kontua ezabatu denean Login pantailara eramango zaizu
                 Intent intent = new Intent(Perfila.this, Login.class);

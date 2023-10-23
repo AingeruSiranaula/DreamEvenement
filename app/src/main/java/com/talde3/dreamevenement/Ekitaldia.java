@@ -2,9 +2,8 @@ package com.talde3.dreamevenement;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
-public class Eskontza implements Serializable {
+public class Ekitaldia implements Serializable {
     private String deskribapena;
     private ArrayList<Number> gonbidatuak;
     private int id;
@@ -13,7 +12,7 @@ public class Eskontza implements Serializable {
     private String argazkia;
 
     // Constructor
-    public Eskontza(String deskribapena, ArrayList<Number> gonbidatuak, int id, String izena, ArrayList<Number> prezioak, String argazkia) {
+    public Ekitaldia(String deskribapena, ArrayList<Number> gonbidatuak, int id, String izena, ArrayList<Number> prezioak, String argazkia) {
         this.deskribapena = deskribapena;
         this.gonbidatuak = gonbidatuak;
         this.id = id;
@@ -22,7 +21,7 @@ public class Eskontza implements Serializable {
         this.argazkia= argazkia;
     }
 
-    public Eskontza() {
+    public Ekitaldia() {
     }
 
     // Getters

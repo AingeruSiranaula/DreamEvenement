@@ -28,7 +28,8 @@ public class Etxea extends AppCompatActivity {
         Button btnEzkontzak = findViewById(R.id.btnEzkontzak);
         ImageButton imgBtnProfila = findViewById(R.id.imgBtnProfila);
         Button btnProfila = findViewById(R.id.btnProfila);
-
+        ImageButton imgBtnUrtebetetzeak = findViewById(R.id.imgBtnUrtebetetzeak);
+        Button btnUrtebetetzeak = findViewById(R.id.btnUrtebetetzeak);
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -69,5 +70,16 @@ public class Etxea extends AppCompatActivity {
         };
         imgBtnProfila.setOnClickListener(clickListenerProfila);
         btnProfila.setOnClickListener(clickListenerProfila);
+
+
+        View.OnClickListener clickListenerUrtebetzea = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Etxea.this, Urtebetetzeak.class);
+                startActivity(intent);
+            }
+        };
+        imgBtnUrtebetetzeak.setOnClickListener(clickListenerUrtebetzea);
+        btnUrtebetetzeak.setOnClickListener(clickListenerUrtebetzea);
     }
 }
