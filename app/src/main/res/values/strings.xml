@@ -13,6 +13,7 @@
     <string name="etPasahitzaLogin">Contraseña</string>
     <string name="btnLogin">INICIAR SESIÓN</string>
     <string name="txtErregistroaLogin"><u>¿No tienes una cuenta? Registrate aquí</u></string>
+    <string name="txtAnonymousLogin">Accede de forma anonima</string>
 
     // Erregistroa
     <string name="rbtnPertsonaErregistroa">Pertsona</string>
@@ -98,18 +99,18 @@
     </string>
 
 
-    //etxea
+    // Etxea
     <string name="btnProfila">Perfil</string>
     <string name="btnEzkontza">Bodas</string>
+
     // Perfila
     <string name="btnEditatuPerfila">EDITAR</string>
     <string name="btnGordePerfila">GUARDAR</string>
     <string name="btnEzeztatuPerfila">CANCELAR</string>
     <string name="btnKontuaEzabatu">Borrar cuenta</string>
-    <string name="btnLogOut">Cerrar sesión</string>
     // Erroreak Perfila
     <string name="messageUpdate">Los datos se han actualizado</string>
-
+    <string name="btnLogOut">Cerrar sesión</string>
     //ezabatu kontuaren abisua
     <string name="ezabatuMezua">¿Estás seguro de que deseas borrar tu cuenta? Esta acción no se puede deshacer.</string>
     <string name="baiKontuaEzabatu">Sí, Borrar Cuenta</string>
