@@ -15,10 +15,5 @@ public class TerminoKondizioak extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_termino_kondizioak);
 
-        Intent intent = this.getIntent();
-        Bundle bundle = intent.getExtras();
-        Ekitaldia e =  (Ekitaldia)bundle.getSerializable("eskontza_id");
-
-        Log.i(TAG, e.getIzena());
     }
 }

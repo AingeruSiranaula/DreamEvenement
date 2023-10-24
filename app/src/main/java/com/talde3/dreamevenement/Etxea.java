@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Etxea extends AppCompatActivity {
     private FirebaseAuth mAuth;
+    private boolean isPerson;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,12 @@ public class Etxea extends AppCompatActivity {
         Button btnProfila = findViewById(R.id.btnProfila);
         ImageButton imgBtnUrtebetetzeak = findViewById(R.id.imgBtnUrtebetetzeak);
         Button btnUrtebetetzeak = findViewById(R.id.btnUrtebetetzeak);
+        ImageButton imgBtnJanak = findViewById(R.id.imgBtnJanak);
+        Button btnJanak = findViewById(R.id.btnJanak);
+        ImageButton imgBtnAfariak = findViewById(R.id.imgBtnAfariak);
+        Button btnAfariak = findViewById(R.id.btnAfariak);
+        ImageButton imgBtnJaunartzeakBataioak = findViewById(R.id.imgBtnJaunartzeakBataioak);
+        Button btnJaunartzeakBataioak = findViewById(R.id.btnJaunartzeakBataioak);
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -81,5 +88,38 @@ public class Etxea extends AppCompatActivity {
         };
         imgBtnUrtebetetzeak.setOnClickListener(clickListenerUrtebetzea);
         btnUrtebetetzeak.setOnClickListener(clickListenerUrtebetzea);
+
+        View.OnClickListener clickListenerJana = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Etxea.this, Janak.class);
+                startActivity(intent);
+            }
+        };
+        imgBtnJanak.setOnClickListener(clickListenerJana);
+        btnJanak.setOnClickListener(clickListenerJana);
+
+        View.OnClickListener clickListenerAfaria = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Etxea.this, Afariak.class);
+                startActivity(intent);
+            }
+        };
+        imgBtnAfariak.setOnClickListener(clickListenerAfaria);
+        btnAfariak.setOnClickListener(clickListenerAfaria);
+
+        View.OnClickListener clickListenerJaunartzeakBataioak = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Etxea.this, JaunartzeakBataioak.class);
+                startActivity(intent);
+            }
+        };
+        imgBtnJaunartzeakBataioak.setOnClickListener(clickListenerJaunartzeakBataioak);
+        btnJaunartzeakBataioak.setOnClickListener(clickListenerJaunartzeakBataioak);
+
+
+
     }
 }

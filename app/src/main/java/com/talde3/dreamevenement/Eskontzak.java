@@ -93,7 +93,7 @@ public class Eskontzak extends AppCompatActivity {
                                 botoia.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        Intent intent = new Intent(Eskontzak.this, TerminoKondizioak.class);
+                                        Intent intent = new Intent(Eskontzak.this, Ekitaldiak.class);
                                         intent.putExtra("eskontza_id", eskontza);
                                         startActivity(intent);
                                     }

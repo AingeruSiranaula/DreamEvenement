@@ -47,12 +47,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
+            app:buttonTint="@color/black"
+            android:textColor="@color/black"
             android:text="@string/rbtnEnpresaErregistroa" />
 
         <RadioButton
             android:id="@+id/rbtnPertsonaErregistroa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:buttonTint="@color/black"
+            android:textColor="@color/black"
             android:text="@string/rbtnPertsonaErregistroa" />
 
     </RadioGroup>
@@ -459,7 +463,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25sp"
-            android:layout_marginEnd="2sp" />
+            android:layout_marginEnd="2sp"
+            app:buttonIconTint="@color/white"
+            app:buttonTint="@color/black" />
 
         <TextView
             android:id="@+id/txtEnpresaTerminoak"

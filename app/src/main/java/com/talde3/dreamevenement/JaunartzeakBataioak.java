@@ -24,7 +24,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class Urtebetetzeak extends AppCompatActivity {
+public class JaunartzeakBataioak extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +34,13 @@ public class Urtebetetzeak extends AppCompatActivity {
         setContentView(R.layout.activity_eskontzak);
 
 
-        db.collection("Urtebetetzeak")
+        db.collection("Jaunartzeak-Bataioak")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-                            ArrayList<Ekitaldia> urtebetetzeaList = new ArrayList<>(); // ArrayList non egongo diren gordeta Eskontza deberdinak
+                            ArrayList<Ekitaldia> jaunartzeakBataioakList = new ArrayList<>(); // ArrayList non egongo diren gordeta Eskontza deberdinak
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 // Recupera los datos del documento de Firestore
@@ -52,25 +52,25 @@ public class Urtebetetzeak extends AppCompatActivity {
                                 String argazkia = document.getString("Argazkia");
 
                                 // Eskontza berri bat sortu lortutako datuekin
-                                Ekitaldia urtebetetzea = new Ekitaldia(deskribapena, gonbidatuak, id, izena, prezioak, argazkia);
+                                Ekitaldia jaunartzeakBataioak = new Ekitaldia(deskribapena, gonbidatuak, id, izena, prezioak, argazkia);
                                 // ArrayList barruan sartu sortutako eskontza
-                                urtebetetzeaList.add(urtebetetzea);
+                                jaunartzeakBataioakList.add(jaunartzeakBataioak);
                             }
 
                             LinearLayout layout = findViewById(R.id.layoutEskontzak);
 
                             //Eskontza bakoitzeko botoi berri bat sortzen da beraren izenarekin, qtea gainera Datu Basean daukan Id-a ematen dio
                             //activity_eskontzak.xml-ean sortutako
-                            for (Ekitaldia urtebetetzea : urtebetetzeaList) {
-                                ImageButton botoia = new ImageButton(Urtebetetzeak.this);
-                                String argazkia = urtebetetzea.getArgazkia();
+                            for (Ekitaldia jaunartzeaBataioa : jaunartzeakBataioakList) {
+                                ImageButton botoia = new ImageButton(JaunartzeakBataioak.this);
+                                String argazkia = jaunartzeaBataioa.getArgazkia();
                                 int idImagen = getResources().getIdentifier(argazkia, "drawable", getPackageName());
                                 botoia.setImageResource(idImagen);
-                                botoia.setId(urtebetetzea.getId());
+                                botoia.setId(jaunartzeaBataioa.getId());
 
                                 //Lekuen izena textview batean sartu
-                                TextView izenaTextView = new TextView(Urtebetetzeak.this);
-                                izenaTextView.setText(urtebetetzea.getIzena());
+                                TextView izenaTextView = new TextView(JaunartzeakBataioak.this);
+                                izenaTextView.setText(jaunartzeaBataioa.getIzena());
                                 izenaTextView.setTextColor(Color.BLACK);
                                 izenaTextView.setTextSize(20);
                                 izenaTextView.setGravity(Gravity.CENTER);
@@ -94,8 +94,8 @@ public class Urtebetetzeak extends AppCompatActivity {
                                 botoia.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        Intent intent = new Intent(Urtebetetzeak.this, Ekitaldiak.class);
-                                        intent.putExtra("urtebetetzea_id", urtebetetzea);
+                                        Intent intent = new Intent(JaunartzeakBataioak.this, Ekitaldiak.class);
+                                        intent.putExtra("jaunartzeaBataioa_id", jaunartzeaBataioa);
                                         startActivity(intent);
                                     }
                                 });
