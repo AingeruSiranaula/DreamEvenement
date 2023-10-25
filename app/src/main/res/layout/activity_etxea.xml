@@ -32,13 +32,160 @@
 
 
             <TextView
-                android:id="@+id/txtPresentacion_dream_evenement"
+                android:id="@+id/txtDreamevEvenementIzenburua"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
                 android:layout_marginTop="10sp"
-                android:text="@string/presentacion_dream_evenement"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/txtDreamevEvenementIzenburua"
                 android:textColor="@color/black" />
 
+            <TextView
+                android:id="@+id/txtDreamevEvenement1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtDreamevEvenement2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement2"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtDreamevEvenement3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement3"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/txtDreamevEvenement4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement4"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/txtDreamevEvenement5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement5"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/txtDreamevEvenement6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement6"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtDreamevEvenement7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement7"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtDreamevEvenement8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement8"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtDreamevEvenement9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement9"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtDreamevEvenement10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement10"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtDreamevEvenement11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement11"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtDreamevEvenement12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement12"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtDreamevEvenement13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:textSize="14sp"
+                android:text="@string/txtDreamevEvenement13"
+                android:textColor="@color/black" />
 
         </LinearLayout>
     </ScrollView>

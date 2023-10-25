@@ -108,41 +108,23 @@
     <string name="btnAfaria">Cenas</string>
     <string name="btnJaunartzeakBataioak">Comuniones y bautizos</string>
     //Aurkezpena
-    <string name="presentacion_dream_evenement">
-    <![CDATA[
-        Bienvenidos a Dream Evenement: Donde tus Sueños se Hacen Realidad
 
-        En Dream Evenement, creemos que la vida está llena de momentos especiales que merecen ser celebrados. Somos una empresa dedicada a la organización de eventos excepcionales para empresas y personas, y nuestra pasión es convertir tus sueños en realidad. Desde bodas mágicas hasta eventos corporativos inolvidables, estamos aquí para hacer que cada ocasión sea única y memorable.
-
-        ¿Quiénes Somos?
-
-        En Dream Evenement, nos enorgullece contar con un equipo de profesionales apasionados por la organización de eventos. Nuestra experiencia abarca décadas, y hemos trabajado con una amplia gama de clientes, desde novios emocionados hasta corporaciones multinacionales. Combinamos creatividad, innovación y atención al detalle para asegurarnos de que cada evento sea una obra maestra.
-
-        Nuestros organizadores de eventos, decoradores, diseñadores florales, expertos en catering y otros especialistas trabajan juntos para dar vida a tu visión. No importa cuán grande o pequeño sea tu evento, nos dedicamos a hacerlo único y memorable.
-
-        Nuestra Aplicación Móvil: Tu Portal a Eventos de Ensueño
-
-        Para facilitar la planificación y reserva de tus eventos, hemos desarrollado la aplicación móvil Dream Evenement. Esta aplicación es tu entrada al emocionante mundo de la organización de eventos de alta calidad. ¿Por qué elegir Dream Evenement?
-
-        - Variedad de Opciones: Nuestra aplicación te ofrece acceso a una amplia variedad de eventos, desde bodas íntimas hasta lanzamientos de productos impresionantes. Sea cual sea tu visión, la tenemos cubierta.
-
-        - Reserva Fácil y Segura: Con unos pocos toques en tu dispositivo móvil, puedes reservar el evento de tus sueños. Nuestra plataforma de pago segura garantiza que tus transacciones sean totalmente seguras.
-
-        - Servicio Personalizado: En Dream Evenement, creemos en la atención al cliente excepcional. Nuestro equipo está disponible para responder a tus preguntas y asegurarse de que cada detalle se ajuste a tus expectativas.
-
-        - Notificaciones y Actualizaciones: Mantente al día con la información de tus eventos a través de notificaciones en tiempo real. No te perderás ningún detalle importante.
-
-        - Inspiración Constante: Explora nuestras galerías de fotos y artículos para inspirarte en la planificación de tu evento. Desde tendencias de decoración hasta ideas de menú, te proporcionamos una fuente inagotable de inspiración.
-
-        ¿Por Qué Dream Evenement?
-
-        Cuando eliges Dream Evenement, eliges la excelencia en la organización de eventos. Estamos comprometidos a convertir tus sueños en una realidad memorable. Ya sea que estés planeando tu boda de ensueño, un aniversario especial o un evento corporativo crucial, estamos aquí para garantizar que cada detalle esté perfectamente en su lugar.
-
-        Nuestra aplicación móvil te brinda la comodidad de reservar eventos en cualquier momento y en cualquier lugar. Además, te mantendrá informado sobre las últimas tendencias en eventos y te inspirará a crear algo verdaderamente excepcional.
-
-        Así que, ¿por qué esperar? Descarga la aplicación Dream Evenement y comienza a planificar el evento de tus sueños hoy. Nos enorgullece ser parte de tu viaje y estamos ansiosos por hacer realidad tus sueños y crear recuerdos que durarán toda la vida. ¡Bienvenidos a Dream Evenement!
-        ]]>
+    <string name="txtDreamevEvenementIzenburua"> Bienvenidos a Dream Evenement: El evento de tus sueños, al alcance de tus manos</string>
+    <string name="txtDreamevEvenement1"> En Dream Evenement, creemos que la vida está llena de momentos especiales que merecen ser celebrados. Somos una empresa dedicada a la organización de eventos excepcionales para empresas y personas, y nuestra pasión es convertir tus sueños en realidad. Desde bodas mágicas hasta eventos corporativos inolvidables, estamos aquí para hacer que cada ocasión sea única y memorable.</string>
+    <string name="txtDreamevEvenement2"> ¿Quiénes Somos? </string>
+    <string name="txtDreamevEvenement3">  En Dream Evenement, nos enorgullece contar con un equipo de profesionales apasionados por la organización de eventos. Nuestra experiencia abarca décadas, y hemos trabajado con una amplia gama de clientes, desde novios emocionados hasta corporaciones multinacionales. Combinamos creatividad, innovación y atención al detalle para asegurarnos de que cada evento sea una obra maestra. Nuestros organizadores de eventos, decoradores, diseñadores florales, expertos en catering y otros especialistas trabajan juntos para dar vida a tu visión. No importa cuán grande o pequeño sea tu evento, nos dedicamos a hacerlo único y memorable. </string>
+    <string name="txtDreamevEvenement4">  Nuestra Aplicación Móvil: Tu Portal a Eventos de Ensueño </string>
+    <string name="txtDreamevEvenement5">   Para facilitar la planificación y reserva de tus eventos, hemos desarrollado la aplicación móvil Dream Evenement. Esta aplicación es tu entrada al emocionante mundo de la organización de eventos de alta calidad. </string>
+    <string name="txtDreamevEvenement6">      ¿Por qué elegir Dream Evenement?</string>
+    <string name="txtDreamevEvenement7">   - Variedad de Opciones: Nuestra aplicación te ofrece acceso a una amplia variedad de eventos, desde bodas íntimas hasta lanzamientos de productos impresionantes. Sea cual sea tu visión, la tenemos cubierta.</string>
+    <string name="txtDreamevEvenement8">   - Reserva Fácil y Segura: Con unos pocos toques en tu dispositivo móvil, puedes reservar el evento de tus sueños. Nuestra plataforma de pago segura garantiza que tus transacciones sean totalmente seguras.</string>
+    <string name="txtDreamevEvenement9">   - Servicio Personalizado: En Dream Evenement, creemos en la atención al cliente excepcional. Nuestro equipo está disponible para responder a tus preguntas y asegurarse de que cada detalle se ajuste a tus expectativas.</string>
+    <string name="txtDreamevEvenement10">   - Notificaciones y Actualizaciones: Mantente al día con la información de tus eventos a través de notificaciones en tiempo real. No te perderás ningún detalle importante.</string>
+    <string name="txtDreamevEvenement11">  - Inspiración Constante: Explora nuestras galerías de fotos y artículos para inspirarte en la planificación de tu evento. Desde tendencias de decoración hasta ideas de menú, te proporcionamos una fuente inagotable de inspiración.</string>
+    <string name="txtDreamevEvenement12">  ¿Por Qué Dream Evenement? </string>
+    <string name="txtDreamevEvenement13"> Cuando eliges Dream Evenement, eliges la excelencia en la organización de eventos. Estamos comprometidos a convertir tus sueños en una realidad memorable. Ya sea que estés planeando tu boda de ensueño, un aniversario especial o un evento corporativo crucial, estamos aquí para garantizar que cada detalle esté perfectamente en su lugar.Nuestra aplicación móvil te brinda la comodidad de reservar eventos en cualquier momento y en cualquier lugar. Además, te mantendrá informado sobre las últimas tendencias en eventos y te inspirará a crear algo verdaderamente excepcional.Así que, ¿por qué esperar? Descarga la aplicación Dream Evenement y comienza a planificar el evento de tus sueños hoy. Nos enorgullece ser parte de tu viaje y estamos ansiosos por hacer realidad tus sueños y crear recuerdos que durarán toda la vida. ¡Bienvenidos a Dream Evenement!
     </string>
+
 
     // Perfila
     <string name="btnEditatuPerfila">EDITAR</string>
