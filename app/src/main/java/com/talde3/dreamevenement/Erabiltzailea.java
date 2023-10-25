@@ -1,6 +1,8 @@
 package com.talde3.dreamevenement;
 
-public class Erabiltzailea {
+import java.io.Serializable;
+
+public class Erabiltzailea implements Serializable {
     private String email;
     private String nan;
     private String izena;

@@ -1,9 +1,12 @@
 package com.talde3.dreamevenement;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -14,13 +17,14 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Etxea extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    private boolean isPerson;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_etxea);
+
+        Intent intent = getIntent();
 
         ImageButton imgGoitibeherakoaMenuaItxi = findViewById(R.id.imgGoitibeherakoaMenuaItxi);
         ImageButton imgGoitibeherakoaMenuaIreki = findViewById(R.id.imgGoitibeherakoaMenuaIreki);
@@ -42,6 +46,19 @@ public class Etxea extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
             imgBtnProfila.setVisibility(View.VISIBLE);
+        }
+
+        if (intent != null) {
+            Bundle bundle = intent.getExtras();
+            if (bundle != null){
+                Erabiltzailea erabil =  (Erabiltzailea)bundle.getSerializable("erabiltzailea_mota");
+                if(!erabil.getEnpresa()){
+                    imgBtnEzkontzak.setVisibility(View.VISIBLE);
+                    btnEzkontzak.setVisibility(View.VISIBLE);
+                    imgBtnJaunartzeakBataioak.setVisibility(View.VISIBLE);
+                    btnJaunartzeakBataioak.setVisibility(View.VISIBLE);
+                }
+            }
         }
 
         imgGoitibeherakoaMenuaItxi.setOnClickListener(new View.OnClickListener() {

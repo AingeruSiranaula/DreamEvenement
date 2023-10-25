@@ -75,8 +75,6 @@ public class Eskontzak extends AppCompatActivity {
                                 izenaTextView.setTextSize(20);
                                 izenaTextView.setGravity(Gravity.CENTER);
 
-
-
                                 //Argazkia botoiaren tamanaira ajutatuko da
                                 botoia.setScaleType(ImageView.ScaleType.FIT_CENTER);
 

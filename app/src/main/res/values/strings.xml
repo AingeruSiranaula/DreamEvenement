@@ -158,10 +158,8 @@
     <string name="kantzelatu">Cancelar</string>
 
     //Ekitaldiak
-    <string name="btnHurrengoOrria">Siguiente</string>
+    <string name="btnHurrengoOrria">Reservar</string>
     <string name="txtGonbidatuZenbakia">Número de invitados</string>
     <string name="txtArgazkilariOrudak">Horas de Fotografía</string>
     <string name="checkBoxApainketa">Decoración</string>
-
-    /
 </resources>

@@ -17,18 +17,26 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     EditText email, pasahitza;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
         Button btnLogin = findViewById(R.id.btnLogin);
         TextView txtErregistroa = findViewById(R.id.txtErregistroaLogin);
@@ -57,9 +65,19 @@ public class Login extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
                                         Log.d(TAG, "signInWithEmail:success");
-                                        Intent intent = new Intent(Login.this, Etxea.class);
-                                        startActivity(intent);
-                                        gordeSharedPreferences();
+                                        DocumentReference docRef = db.collection("Erabiltzaileak").document(currentUser.getEmail());
+                                        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                            @Override
+                                            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                                // Datuak erabiltzaile objetu bihurtu
+                                                Erabiltzailea erabil = documentSnapshot.toObject(Erabiltzailea.class);
+
+                                                Intent intent = new Intent(Login.this, Etxea.class);
+                                                intent.putExtra("erabiltzailea_mota", erabil);
+                                                startActivity(intent);
+                                                gordeSharedPreferences();
+                                            }
+                                        });
                                     } else {
                                         Log.w(TAG, "signInWithEmail:failure", task.getException());
                                         Toast.makeText(Login.this, "Contraseña o usuario incorrectos",
