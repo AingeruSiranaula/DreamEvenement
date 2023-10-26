@@ -5,35 +5,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/beige"
-    tools:context=".Perfila">
-
-    <Button
-        android:id="@+id/btnKontuaEzabatu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
-        android:backgroundTint="@color/buttonColor"
-        android:text="@string/btnKontuaEzabatu"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutEnpresaPerfila"
-        app:layout_constraintVertical_bias="0.453" />
+    tools:context=".view.Perfila">
 
     <Button
         android:id="@+id/btnLogOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/btnLogOut"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/layoutEnpresaPerfila"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toEndOf="@+id/btnKontuaEzabatu"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditatuPerfila"
+        app:layout_constraintVertical_bias="0.012" />
+
+    <Button
+        android:id="@+id/btnKontuaEzabatu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/btnKontuaEzabatu"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEditatuPerfila"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <Button
+        android:id="@+id/btnEditatuPerfila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/btnEditatuPerfila"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEnpresaPerfila"
+        app:layout_constraintVertical_bias="0.246" />
 
     <Button
         android:id="@+id/btnGordePerfila"
@@ -48,22 +63,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutEnpresaPerfila"
-        app:layout_constraintVertical_bias="0.079" />
+        app:layout_constraintVertical_bias="0.246" />
 
-    <Button
-        android:id="@+id/btnEditatuPerfila"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
-        android:backgroundTint="@color/buttonColor"
-        android:text="@string/btnEditatuPerfila"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imgLeloaErregistroa"
+        android:layout_width="294dp"
+        android:layout_height="237dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="imglogo"
+        android:src="@drawable/leloa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutEnpresaPerfila"
-        app:layout_constraintVertical_bias="0.079" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/layoutEnpresaPerfila"
@@ -75,7 +87,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356">
+        app:layout_constraintVertical_bias="0.54">
 
         <LinearLayout
             android:layout_width="match_parent"

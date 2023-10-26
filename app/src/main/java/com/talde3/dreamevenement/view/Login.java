@@ -1,4 +1,4 @@
-package com.talde3.dreamevenement;
+package com.talde3.dreamevenement.view;
 
 import static android.content.ContentValues.TAG;
 
@@ -25,6 +25,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.talde3.dreamevenement.R;
+import com.talde3.dreamevenement.model.Erabiltzailea;
 
 public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -35,18 +37,18 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //Authentification instantzia eta logeatutako erabiltzailearen informazioa lortu
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
+        //
         Button btnLogin = findViewById(R.id.btnLogin);
         TextView txtErregistroa = findViewById(R.id.txtErregistroaLogin);
         TextView txtAnonymousLogin = findViewById(R.id.txtAnonymousLogin);
 
         email = findViewById(R.id.etEmailLogin);
         pasahitza = findViewById(R.id.etPasahitzaLogin);
-
-        mAuth = FirebaseAuth.getInstance();
-
+         // Shared preferences kargatu
         kargatuSharedPreferences();
 
         // Logeatze kasuan
@@ -110,12 +112,12 @@ public class Login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    // Sign in success, update UI with the signed-in user's information
+                                    // Anonimo bezala loga ondo
                                     Log.d(TAG, "signInAnonymously:success");
                                     Intent intent = new Intent(Login.this, Etxea.class);
                                     startActivity(intent);
                                 } else {
-                                    // If sign in fails, display a message to the user.
+                                    // Anonimo bezala loga errore
                                     Log.w(TAG, "signInAnonymously:failure", task.getException());
                                     Toast.makeText(Login.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
@@ -125,6 +127,7 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+    // Shared preferences kargatzeko metodoa
     private void kargatuSharedPreferences() {
         SharedPreferences preferences = getSharedPreferences("credentials", Context.MODE_PRIVATE);
 
@@ -132,6 +135,7 @@ public class Login extends AppCompatActivity {
         email.setText(user);
     }
 
+    // Shared preferences gordetzeko metodoa
     private void gordeSharedPreferences() {
         SharedPreferences preferences = getSharedPreferences("credentials", Context.MODE_PRIVATE);
 

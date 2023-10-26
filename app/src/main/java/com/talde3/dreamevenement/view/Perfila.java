@@ -1,4 +1,4 @@
-package com.talde3.dreamevenement;
+package com.talde3.dreamevenement.view;
 
 import static android.content.ContentValues.TAG;
 
@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -20,6 +21,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.talde3.dreamevenement.R;
+import com.talde3.dreamevenement.model.Erabiltzailea;
 
 public class Perfila extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -44,6 +47,7 @@ public class Perfila extends AppCompatActivity {
         Button btnGordePerfila = findViewById(R.id.btnGordePerfila);
         Button btnEditatuPerfila = findViewById(R.id.btnEditatuPerfila);
 
+        TextView txtNifEnpresaPerfila = findViewById(R.id.txtNifEnpresaPerfila);
         EditText nifEnpresa = findViewById(R.id.edtNifEnpresaPerfila);
         EditText izenaEnpresa = findViewById(R.id.edtEnpresaIzenaPerfila);
         EditText emailEnpresa = findViewById(R.id.edtEmailEnpresaPerfila);
@@ -56,13 +60,17 @@ public class Perfila extends AppCompatActivity {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 // Datuak erabiltzaile objetu bihurtu
-                Erabiltzailea e = documentSnapshot.toObject(Erabiltzailea.class);
+                Erabiltzailea erabil = documentSnapshot.toObject(Erabiltzailea.class);
 
-                nifEnpresa.setText(e.getNif());
-                izenaEnpresa.setText(e.getIzena());
-                emailEnpresa.setText(e.getEmail());
-                telEnpresa.setText(e.getTelefonoa());
-                nanEnpresa.setText(e.getNan());
+                if(!erabil.getEnpresa()){
+                    txtNifEnpresaPerfila.setVisibility(View.GONE);
+                    nifEnpresa.setVisibility(View.GONE);
+                }
+                nifEnpresa.setText(erabil.getNif());
+                izenaEnpresa.setText(erabil.getIzena());
+                emailEnpresa.setText(erabil.getEmail());
+                telEnpresa.setText(erabil.getTelefonoa());
+                nanEnpresa.setText(erabil.getNan());
             }
         });
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Etxea"
+    tools:context=".view.Etxea"
     android:background="@color/beige">
 
     <ScrollView
@@ -218,10 +218,11 @@
             android:src="@drawable/desplegable" />
 
         <LinearLayout
+            android:id="@+id/PerfilaLayoutEtxea"
             android:layout_width="275sp"
             android:layout_height="50sp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20sp">
+            android:layout_marginBottom="20sp"
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imgBtnProfila"
@@ -244,6 +245,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/PerfilaLayoutEzkontzak"
             android:layout_width="275sp"
             android:layout_height="50sp"
             android:layout_marginBottom="20sp"
@@ -272,6 +274,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/PerfilaLayoutUrtebetetzeak"
             android:layout_width="275sp"
             android:layout_height="50sp"
             android:layout_marginBottom="20sp"
@@ -298,6 +301,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/PerfilaLayoutJanak"
             android:layout_width="275sp"
             android:layout_height="50sp"
             android:layout_marginBottom="20sp"
@@ -324,6 +328,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/PerfilaLayoutAfariak"
             android:layout_width="275sp"
             android:layout_height="50sp"
             android:layout_marginBottom="20sp"
@@ -350,6 +355,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/PerfilaLayoutJaunartzeBataioak"
             android:layout_width="275sp"
             android:layout_height="50sp"
             android:layout_marginBottom="20sp"

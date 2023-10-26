@@ -1,4 +1,4 @@
-package com.talde3.dreamevenement;
+package com.talde3.dreamevenement.model;
 
 import java.io.Serializable;
 

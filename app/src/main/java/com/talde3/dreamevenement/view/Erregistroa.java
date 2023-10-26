@@ -1,4 +1,4 @@
-package com.talde3.dreamevenement;
+package com.talde3.dreamevenement.view;
 
 import static android.content.ContentValues.TAG;
 
@@ -22,8 +22,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.talde3.dreamevenement.R;
+import com.talde3.dreamevenement.model.Erabiltzailea;
 
 public class Erregistroa extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -32,6 +33,7 @@ public class Erregistroa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_erregistroa);
 
+        // Datu base instantzia
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         //  Layout
@@ -85,13 +87,13 @@ public class Erregistroa extends AppCompatActivity {
                             if(rbtnEnpresa.isChecked()){
                                 email = emailEnpresa.getText().toString();
                                 pasahitza = pasEnpresa.getText().toString();
-                                Erabiltzailea e = new Erabiltzailea(emailEnpresa.getText().toString(), nanEnpresa.getText().toString(), izenaEnpresa.getText().toString(), telEnpresa.getText().toString(), nifEnpresa.getText().toString(), true);
-                                db.collection("Erabiltzaileak").document(email).set(e);
+                                Erabiltzailea erabil = new Erabiltzailea(emailEnpresa.getText().toString(), nanEnpresa.getText().toString(), izenaEnpresa.getText().toString(), telEnpresa.getText().toString(), nifEnpresa.getText().toString(), true);
+                                db.collection("Erabiltzaileak").document(email).set(erabil);
                             }else{
                                 email = emailPertsona.getText().toString();
                                 pasahitza = pasPertsona.getText().toString();
-                                Erabiltzailea e = new Erabiltzailea(emailPertsona.getText().toString(), nanPertsona.getText().toString(), izenaPertsona.getText().toString(), telPertsona.getText().toString(), "", false);
-                                db.collection("Erabiltzaileak").document(email).set(e);
+                                Erabiltzailea erabil = new Erabiltzailea(emailPertsona.getText().toString(), nanPertsona.getText().toString(), izenaPertsona.getText().toString(), telPertsona.getText().toString(), "", false);
+                                db.collection("Erabiltzaileak").document(email).set(erabil);
                             }
 
                             mAuth.createUserWithEmailAndPassword(email,pasahitza)

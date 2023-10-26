@@ -1,4 +1,4 @@
-package com.talde3.dreamevenement;
+package com.talde3.dreamevenement.view;
 
 import static android.content.ContentValues.TAG;
 
@@ -14,6 +14,8 @@ import android.widget.LinearLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.talde3.dreamevenement.R;
+import com.talde3.dreamevenement.model.Erabiltzailea;
 
 public class Etxea extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -24,39 +26,55 @@ public class Etxea extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_etxea);
 
-        Intent intent = getIntent();
-
-        ImageButton imgGoitibeherakoaMenuaItxi = findViewById(R.id.imgGoitibeherakoaMenuaItxi);
-        ImageButton imgGoitibeherakoaMenuaIreki = findViewById(R.id.imgGoitibeherakoaMenuaIreki);
-        LinearLayout linearLayoutMenu = findViewById(R.id.linearLayoutMenu);
-        ImageButton imgBtnEzkontzak = findViewById(R.id.imgBtnEzkontzak);
-        Button btnEzkontzak = findViewById(R.id.btnEzkontzak);
-        ImageButton imgBtnProfila = findViewById(R.id.imgBtnProfila);
-        Button btnProfila = findViewById(R.id.btnProfila);
-        ImageButton imgBtnUrtebetetzeak = findViewById(R.id.imgBtnUrtebetetzeak);
-        Button btnUrtebetetzeak = findViewById(R.id.btnUrtebetetzeak);
-        ImageButton imgBtnJanak = findViewById(R.id.imgBtnJanak);
-        Button btnJanak = findViewById(R.id.btnJanak);
-        ImageButton imgBtnAfariak = findViewById(R.id.imgBtnAfariak);
-        Button btnAfariak = findViewById(R.id.btnAfariak);
-        ImageButton imgBtnJaunartzeakBataioak = findViewById(R.id.imgBtnJaunartzeakBataioak);
-        Button btnJaunartzeakBataioak = findViewById(R.id.btnJaunartzeakBataioak);
-
+        //Authentification instantzia eta logeatutako erabiltzailearen informazioa lortu
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            imgBtnProfila.setVisibility(View.VISIBLE);
+
+        Intent intent = getIntent();
+
+        // Menua botoiak
+        ImageButton imgGoitibeherakoaMenuaItxi = findViewById(R.id.imgGoitibeherakoaMenuaItxi);
+        ImageButton imgGoitibeherakoaMenuaIreki = findViewById(R.id.imgGoitibeherakoaMenuaIreki);
+
+        ImageButton imgBtnEzkontzak = findViewById(R.id.imgBtnEzkontzak);
+        Button btnEzkontzak = findViewById(R.id.btnEzkontzak);
+
+        ImageButton imgBtnProfila = findViewById(R.id.imgBtnProfila);
+        Button btnProfila = findViewById(R.id.btnProfila);
+
+        ImageButton imgBtnUrtebetetzeak = findViewById(R.id.imgBtnUrtebetetzeak);
+        Button btnUrtebetetzeak = findViewById(R.id.btnUrtebetetzeak);
+
+        ImageButton imgBtnJanak = findViewById(R.id.imgBtnJanak);
+        Button btnJanak = findViewById(R.id.btnJanak);
+
+        ImageButton imgBtnAfariak = findViewById(R.id.imgBtnAfariak);
+        Button btnAfariak = findViewById(R.id.btnAfariak);
+
+        ImageButton imgBtnJaunartzeakBataioak = findViewById(R.id.imgBtnJaunartzeakBataioak);
+        Button btnJaunartzeakBataioak = findViewById(R.id.btnJaunartzeakBataioak);
+        // Layout elementuak
+        LinearLayout linearLayoutMenu = findViewById(R.id.linearLayoutMenu);
+        LinearLayout PerfilaLayoutEtxea = findViewById(R.id.PerfilaLayoutEtxea);
+        LinearLayout PerfilaLayoutEzkontzak = findViewById(R.id.PerfilaLayoutEzkontzak);
+        LinearLayout PerfilaLayoutJaunartzeBataioak = findViewById(R.id.PerfilaLayoutJaunartzeBataioak);
+
+        // Animo bezala logeatzean
+        if (currentUser.getDisplayName() == "") {
+            PerfilaLayoutEtxea.setVisibility(View.GONE);
+            PerfilaLayoutEzkontzak.setVisibility(View.VISIBLE);
+            PerfilaLayoutJaunartzeBataioak.setVisibility(View.VISIBLE);
         }
 
+        // Intent-eko informazioa lortu
         if (intent != null) {
             Bundle bundle = intent.getExtras();
             if (bundle != null){
                 Erabiltzailea erabil =  (Erabiltzailea)bundle.getSerializable("erabiltzailea_mota");
+                Log.i(TAG, erabil.getEnpresa().toString());
                 if(!erabil.getEnpresa()){
-                    imgBtnEzkontzak.setVisibility(View.VISIBLE);
-                    btnEzkontzak.setVisibility(View.VISIBLE);
-                    imgBtnJaunartzeakBataioak.setVisibility(View.VISIBLE);
-                    btnJaunartzeakBataioak.setVisibility(View.VISIBLE);
+                    PerfilaLayoutEzkontzak.setVisibility(View.VISIBLE);
+                    PerfilaLayoutJaunartzeBataioak.setVisibility(View.VISIBLE);
                 }
             }
         }

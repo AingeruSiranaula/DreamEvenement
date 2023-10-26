@@ -1,10 +1,12 @@
-package com.talde3.dreamevenement;
+package com.talde3.dreamevenement.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.talde3.dreamevenement.R;
 
 public class Hasiera extends AppCompatActivity {
 

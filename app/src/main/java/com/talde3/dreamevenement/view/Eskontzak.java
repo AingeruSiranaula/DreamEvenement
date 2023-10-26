@@ -1,4 +1,4 @@
-package com.talde3.dreamevenement;
+package com.talde3.dreamevenement.view;
 
 import static android.content.ContentValues.TAG;
 
@@ -21,6 +21,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.talde3.dreamevenement.R;
+import com.talde3.dreamevenement.model.Ekitaldia;
 
 import java.util.ArrayList;
 
@@ -28,12 +30,12 @@ public class Eskontzak extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eskontzak);
+        // Datu baseko instantzia
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-
+        // Datu baseko Eskontzak kolekzioko dokumentu guztien karga
         db.collection("Eskontzak")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -43,7 +45,7 @@ public class Eskontzak extends AppCompatActivity {
                             ArrayList<Ekitaldia> eskontzaList = new ArrayList<>(); // ArrayList non egongo diren gordeta Eskontza deberdinak
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                // Recupera los datos del documento de Firestore
+                                // Firestoreko dokumentoen informazioa berrezkuratu
                                 String deskribapena = document.getString("Deskribapena");
                                 ArrayList<Number> gonbidatuak = (ArrayList<Number>) document.get("Gonbidatuak");
                                 int id = document.getLong("Id").intValue();
