@@ -56,8 +56,23 @@ public class Ekitaldiak extends AppCompatActivity {
         NumberPicker numberPickerGonbidatuak = findViewById(R.id.numberPickerGonbidatuak);
         NumberPicker numberPickerArgazkilariOrduak = findViewById(R.id.numberPickerArgazkilariOrduak);
         CheckBox checkBoxApainketa = findViewById(R.id.checkBoxApainketa);
+        TextView txtArgazkilariOrudak = findViewById(R.id.txtArgazkilariOrudak);
+        TextView txtGonbidatuZenbakia = findViewById(R.id.txtGonbidatuZenbakia);
+
+
+
 
         Ekitaldia ekitaldi = null;
+
+        if (mAuth.getCurrentUser().isAnonymous()){
+            btnHurrengoOrria.setVisibility(View.GONE);
+            simpleDatePicker.setVisibility(View.GONE);
+            numberPickerGonbidatuak.setVisibility(View.GONE);
+            numberPickerArgazkilariOrduak.setVisibility(View.GONE);
+            checkBoxApainketa.setVisibility(View.GONE);
+            txtArgazkilariOrudak.setVisibility(View.GONE);
+            txtGonbidatuZenbakia.setVisibility(View.GONE);
+        }
 
         if (intent != null) {
             Bundle bundle = intent.getExtras();

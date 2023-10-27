@@ -60,7 +60,7 @@ public class Etxea extends AppCompatActivity {
         LinearLayout PerfilaLayoutJaunartzeBataioak = findViewById(R.id.PerfilaLayoutJaunartzeBataioak);
 
         // Animo bezala logeatzean
-        if (currentUser.getDisplayName() == "") {
+        if (mAuth.getCurrentUser().isAnonymous()){
             PerfilaLayoutEtxea.setVisibility(View.GONE);
             PerfilaLayoutEzkontzak.setVisibility(View.VISIBLE);
             PerfilaLayoutJaunartzeBataioak.setVisibility(View.VISIBLE);
